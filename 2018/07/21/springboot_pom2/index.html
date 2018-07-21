@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>个人博客的实现 | shaocg的个人博客</title>
+  <title>springboot pom篇(下) | shaocg的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="欢迎来到我的个人博客，写博客的目的纯粹是为了分享自己的学习经验，同时也能记录自己在计算机道路上的点点滴滴，也算是对自己的一种督促吧关于主题模板可以参考以下文件：主题来源关于.md文件的书写格式可以参考以下文件：md文件这里有详细的创建流程：创建流程">
+  <meta name="description" content="springboot基础学习pom篇(下)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="个人博客的实现">
-<meta property="og:url" content="http://yoursite.com/2018/07/21/aboutBlog/index.html">
+<meta property="og:title" content="springboot pom篇(下)">
+<meta property="og:url" content="http://yoursite.com/2018/07/21/springboot_pom2/index.html">
 <meta property="og:site_name" content="shaocg的个人博客">
-<meta property="og:description" content="欢迎来到我的个人博客，写博客的目的纯粹是为了分享自己的学习经验，同时也能记录自己在计算机道路上的点点滴滴，也算是对自己的一种督促吧关于主题模板可以参考以下文件：主题来源关于.md文件的书写格式可以参考以下文件：md文件这里有详细的创建流程：创建流程">
+<meta property="og:description" content="springboot基础学习pom篇(下)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-21T14:30:32.204Z">
+<meta property="og:updated_time" content="2018-07-21T14:56:38.586Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="个人博客的实现">
-<meta name="twitter:description" content="欢迎来到我的个人博客，写博客的目的纯粹是为了分享自己的学习经验，同时也能记录自己在计算机道路上的点点滴滴，也算是对自己的一种督促吧关于主题模板可以参考以下文件：主题来源关于.md文件的书写格式可以参考以下文件：md文件这里有详细的创建流程：创建流程">
+<meta name="twitter:title" content="springboot pom篇(下)">
+<meta name="twitter:description" content="springboot基础学习pom篇(下)">
   
     <link rel="alternative" href="/atom.xml" title="shaocg的个人博客" type="application/atom+xml">
   
@@ -132,27 +132,45 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-aboutBlog" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-springboot_pom2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      个人博客的实现
+      springboot pom篇(下)
     </h1>
   
 
         
-        <a href="/2018/07/21/aboutBlog/" class="archive-article-date">
-  	<time datetime="2018-07-21T06:26:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
+        <a href="/2018/07/21/springboot_pom2/" class="archive-article-date">
+  	<time datetime="2018-07-21T14:49:04.885Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>欢迎来到我的个人博客，写博客的目的纯粹是为了分享自己的学习经验，同时也能记录自己在计算机道路上的点点滴滴，也算是对自己的一种督促吧<br>关于主题模板可以参考以下文件：<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">主题来源</a><br>关于.md文件的书写格式可以参考以下文件：<a href="https://blog.csdn.net/buzaiQQ/article/details/78182639" target="_blank" rel="noopener">md文件</a><br>这里有详细的创建流程：<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="noopener">创建流程</a></p>
+        <p>springboot基础学习<br>pom篇(下)<a id="more"></a></p>
+<h2 id="三、功能JAR包（sql、redis…）"><a href="#三、功能JAR包（sql、redis…）" class="headerlink" title="三、功能JAR包（sql、redis…）"></a>三、功能JAR包（sql、redis…）</h2><h3 id="1-mysql-JAR包引用"><a href="#1-mysql-JAR包引用" class="headerlink" title="1.mysql JAR包引用"></a>1.mysql JAR包引用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<p>druid-spring-boot-starter主要提供阿里druid连接池<br>Druid 有什么优点？</p>
+<ol>
+<li>可以监控数据库访问性能，Druid内置提供了一个功能强大的StatFilter插件，能够详细统计SQL的执行性能，这对于线上分析数据库访问性能有帮助。 </li>
+<li>替换DBCP和C3P0。Druid提供了一个高效、功能强大、可扩展性好的数据库连接池。 </li>
+<li>数据库密码加密。直接把数据库密码写在配置文件中，这是不好的行为，容易导致安全问题。DruidDruiver和DruidDataSource都支持PasswordCallback。 </li>
+<li>SQL执行日志，Druid提供了不同的LogFilter，能够支持Common-Logging、Log4j和JdkLog，你可以按需要选择相应的LogFilter，监控你应用的数据库访问情况。 </li>
+<li>扩展JDBC，如果你要对JDBC层有编程的需求，可以通过Druid提供的Filter-Chain机制，很方便编写JDBC层的扩展插件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;com.alibaba&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;druid-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="2-redis-JAR包引用"><a href="#2-redis-JAR包引用" class="headerlink" title="2.redis JAR包引用"></a>2.redis JAR包引用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="3-jpa-JAR包引用"><a href="#3-jpa-JAR包引用" class="headerlink" title="3.jpa JAR包引用"></a>3.jpa JAR包引用</h3><p>JPA(Java Persistence API)是Sun官方提出的Java持久化规范。它为Java开发人员提供了一种对象/关联映射工具来管理Java应用中的关系数据。他的出现主要是为了简化现有的持久化开发工作和整合ORM技术，结束现在Hibernate，TopLink，JDO等ORM框架各自为营的局面<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-MongoDB-JAR包引用"><a href="#4-MongoDB-JAR包引用" class="headerlink" title="4.MongoDB JAR包引用"></a>4.MongoDB JAR包引用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-data-mongodb&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="四、规范代码JAR包"><a href="#四、规范代码JAR包" class="headerlink" title="四、规范代码JAR包"></a>四、规范代码JAR包</h2><h3 id="1-swagger"><a href="#1-swagger" class="headerlink" title="1.swagger"></a>1.swagger</h3><p>由于接口众多，并且细节复杂（需要考虑不同的HTTP请求类型、HTTP头部信息、HTTP请求内容等），高质量地创建这份文档本身就是件非常吃力的事，下游的抱怨声不绝于耳。<br>随着时间推移，不断修改接口实现的时候都必须同步修改接口文档，而文档与代码又处于两个不同的媒介，除非有严格的管理机制，不然很容易导致不一致现象。<br>为了解决上面这样的问题，通过RESTful API的重磅好伙伴Swagger2，它可以轻松的整合到Spring Boot中，并与Spring MVC程序配合组织出强大RESTful API文档。它既可以减少我们创建文档的工作量，同时说明内容又整合入实现代码中，让维护文档和修改代码整合为一体，可以让我们在修改代码逻辑的同时方便的修改文档说明。另外Swagger2也提供了强大的页面测试功能来调试每个RESTful API。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;io.springfox&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;2.2.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;io.springfox&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;2.2.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-flyway"><a href="#2-flyway" class="headerlink" title="2.flyway"></a>2.flyway</h3><p>Flyway做为database migration开源工具，功能上像是git、svn这种代码版本控制<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.flywaydb&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;flyway-core&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;5.0.3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-健康监控"><a href="#3-健康监控" class="headerlink" title="3.健康监控"></a>3.健康监控</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="五、工具类的使用"><a href="#五、工具类的使用" class="headerlink" title="五、工具类的使用"></a>五、工具类的使用</h2><h3 id="1-lombok"><a href="#1-lombok" class="headerlink" title="1.lombok"></a>1.lombok</h3><p>在项目中使用Lombok可以减少很多重复代码的书写。比如说getter/setter/toString等方法的编写<br>具体使用参考<a href="https://blog.csdn.net/motui/article/details/79012846" target="_blank" rel="noopener">https://blog.csdn.net/motui/article/details/79012846</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.projectlombok&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;lombok&lt;/artifactId&gt;</span><br><span class="line">	&lt;scope&gt;provided&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-jackson"><a href="#2-jackson" class="headerlink" title="2.jackson"></a>2.jackson</h3><p>Jackson框架是基于Java平台的一套数据处理工具，被称为“最好的Java Json解析器”<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;jackson-annotations&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -174,15 +192,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/21/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          create post
-        
-      </div>
-    </a>
   
+    <a href="/2018/07/21/springboot_pom1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">springboot pom篇(上)</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

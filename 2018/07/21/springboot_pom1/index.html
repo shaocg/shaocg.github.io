@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>个人博客的实现 | shaocg的个人博客</title>
+  <title>springboot pom篇(上) | shaocg的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="欢迎来到我的个人博客，写博客的目的纯粹是为了分享自己的学习经验，同时也能记录自己在计算机道路上的点点滴滴，也算是对自己的一种督促吧关于主题模板可以参考以下文件：主题来源关于.md文件的书写格式可以参考以下文件：md文件这里有详细的创建流程：创建流程">
+  <meta name="description" content="springboot基础学习pom篇(上)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="个人博客的实现">
-<meta property="og:url" content="http://yoursite.com/2018/07/21/aboutBlog/index.html">
+<meta property="og:title" content="springboot pom篇(上)">
+<meta property="og:url" content="http://yoursite.com/2018/07/21/springboot_pom1/index.html">
 <meta property="og:site_name" content="shaocg的个人博客">
-<meta property="og:description" content="欢迎来到我的个人博客，写博客的目的纯粹是为了分享自己的学习经验，同时也能记录自己在计算机道路上的点点滴滴，也算是对自己的一种督促吧关于主题模板可以参考以下文件：主题来源关于.md文件的书写格式可以参考以下文件：md文件这里有详细的创建流程：创建流程">
+<meta property="og:description" content="springboot基础学习pom篇(上)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-21T14:30:32.204Z">
+<meta property="og:updated_time" content="2018-07-21T14:50:13.789Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="个人博客的实现">
-<meta name="twitter:description" content="欢迎来到我的个人博客，写博客的目的纯粹是为了分享自己的学习经验，同时也能记录自己在计算机道路上的点点滴滴，也算是对自己的一种督促吧关于主题模板可以参考以下文件：主题来源关于.md文件的书写格式可以参考以下文件：md文件这里有详细的创建流程：创建流程">
+<meta name="twitter:title" content="springboot pom篇(上)">
+<meta name="twitter:description" content="springboot基础学习pom篇(上)">
   
     <link rel="alternative" href="/atom.xml" title="shaocg的个人博客" type="application/atom+xml">
   
@@ -132,27 +132,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-aboutBlog" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-springboot_pom1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      个人博客的实现
+      springboot pom篇(上)
     </h1>
   
 
         
-        <a href="/2018/07/21/aboutBlog/" class="archive-article-date">
-  	<time datetime="2018-07-21T06:26:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
+        <a href="/2018/07/21/springboot_pom1/" class="archive-article-date">
+  	<time datetime="2018-07-21T14:31:34.087Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>欢迎来到我的个人博客，写博客的目的纯粹是为了分享自己的学习经验，同时也能记录自己在计算机道路上的点点滴滴，也算是对自己的一种督促吧<br>关于主题模板可以参考以下文件：<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">主题来源</a><br>关于.md文件的书写格式可以参考以下文件：<a href="https://blog.csdn.net/buzaiQQ/article/details/78182639" target="_blank" rel="noopener">md文件</a><br>这里有详细的创建流程：<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="noopener">创建流程</a></p>
+        <p>springboot基础学习<br>pom篇(上)<a id="more"></a></p>
+<h2 id="一、springboot创建起始类"><a href="#一、springboot创建起始类" class="headerlink" title="一、springboot创建起始类"></a>一、springboot创建起始类</h2><h3 id="1-spring-boot-starter-parent"><a href="#1-spring-boot-starter-parent" class="headerlink" title="1.spring-boot-starter-parent"></a>1.spring-boot-starter-parent</h3><p>Maven的用户可以通过继承spring-boot-starter-parent项目来获得一些合理的默认配置。这个parent提供了以下特性：<br>默认使用Java 8<br>使用UTF-8编码<br>一个引用管理的功能，在dependencies里的部分配置可以不用填写version信息，这些version信息会从spring-boot-dependencies里得到继承。<br>识别过来资源过滤（Sensible resource filtering.）<br>识别插件的配置（Sensible plugin configuration (exec plugin, surefire, Git commit ID, shade).）<br>能够识别application.properties和application.yml类型的文件，同时也能支持profile-specific类型的文件（如： application-foo.properties and application-foo.yml，这个功能可以更好的配置不同生产环境下的配置文件)。<br>maven把默认的占位符${…​}改为了@..@（这点大家还是看下原文自己理解下吧，我个人用的也比较少<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;parent&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;1.3.2.RELEASE&lt;/version&gt;</span><br><span class="line">	&lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;</span><br><span class="line">&lt;/parent&gt;</span><br></pre></td></tr></table></figure></p>
+<p>如果不想使用spring-boot-starter-parent，也可以自己来配置所要使用的版本：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependencyManagement&gt;</span><br><span class="line">    &lt;dependencies&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;!-- Import dependency management from Spring Boot --&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-dependencies&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;2.0.0.BUILD-SNAPSHOT&lt;/version&gt;</span><br><span class="line">            &lt;<span class="built_in">type</span>&gt;pom&lt;/<span class="built_in">type</span>&gt;</span><br><span class="line">            &lt;scope&gt;import&lt;/scope&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">    &lt;/dependencies&gt;</span><br><span class="line">&lt;/dependencyManagement&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-spring-boot-starter"><a href="#2-spring-boot-starter" class="headerlink" title="2.spring-boot-starter"></a>2.spring-boot-starter</h3><p>这是Spring Boot的核心启动器，包含了自动配置、日志和YAML<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-spring-boot-starter-test"><a href="#3-spring-boot-starter-test" class="headerlink" title="3.spring-boot-starter-test"></a>3.spring-boot-starter-test</h3><p>支持常规的测试依赖，包括JUnit、Hamcrest、Mockito以及spring-test模块，测试使用<scope>test</scope>标签，代表只在test目录下能够引到<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">	&lt;scope&gt;<span class="built_in">test</span>&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-spring-boot-starter-web"><a href="#4-spring-boot-starter-web" class="headerlink" title="4.spring-boot-starter-web"></a>4.spring-boot-starter-web</h3><p>支持全栈式Web开发，包括Tomcat和spring-webmvc<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-spring-boot-maven-plugin"><a href="#5-spring-boot-maven-plugin" class="headerlink" title="5.spring-boot-maven-plugin"></a>5.spring-boot-maven-plugin</h3><p>Spring Boot Maven plugin能够将Spring Boot应用打包为可执行的jar或war文件，然后以通常的方式运行Spring Boot应用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;build&gt;</span><br><span class="line">	&lt;plugins&gt;</span><br><span class="line">		&lt;plugin&gt;</span><br><span class="line">			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">			&lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;</span><br><span class="line">		&lt;/plugin&gt;</span><br><span class="line">	&lt;/plugins&gt;</span><br><span class="line">&lt;/build&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="二、springboot附加类"><a href="#二、springboot附加类" class="headerlink" title="二、springboot附加类"></a>二、springboot附加类</h2><h3 id="1-spring-boot-starter-thymeleaf"><a href="#1-spring-boot-starter-thymeleaf" class="headerlink" title="1.spring-boot-starter-thymeleaf"></a>1.spring-boot-starter-thymeleaf</h3><p>支持Thymeleaf模板引擎，包括与Spring的集成<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-spring-boot-starter-freemarker"><a href="#2-spring-boot-starter-freemarker" class="headerlink" title="2.spring-boot-starter-freemarker"></a>2.spring-boot-starter-freemarker</h3><p>支持FreeMarker模板引擎<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-freemarker&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-spring-boot-starter-velocity"><a href="#3-spring-boot-starter-velocity" class="headerlink" title="3.spring-boot-starter-velocity"></a>3.spring-boot-starter-velocity</h3><p>支持Velocity模板引擎<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-velocity&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-spring-boot-starter-aop"><a href="#4-spring-boot-starter-aop" class="headerlink" title="4.spring-boot-starter-aop"></a>4.spring-boot-starter-aop</h3><p>使用aop jar包可以实现切面功能，具体详见<a href="https://blog.csdn.net/liuchuanhong1/article/details/55099753" target="_blank" rel="noopener">https://blog.csdn.net/liuchuanhong1/article/details/55099753</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-aop&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-spring-boot-starter-security"><a href="#5-spring-boot-starter-security" class="headerlink" title="5.spring-boot-starter-security"></a>5.spring-boot-starter-security</h3><p>使用security jar包可以实现用户安全登录功能，提供访问权限<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="6-缓存机制"><a href="#6-缓存机制" class="headerlink" title="6.缓存机制"></a>6.缓存机制</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-cache&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;net.sf.ehcache&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;ehcache&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="7-spring-boot-starter-mail"><a href="#7-spring-boot-starter-mail" class="headerlink" title="7.spring-boot-starter-mail"></a>7.spring-boot-starter-mail</h3><p>用于发送邮件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">		&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;spring-boot-starter-mail&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -174,15 +187,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/21/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/07/21/springboot_pom2/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          create post
+          springboot pom篇(下)
         
       </div>
     </a>
   
+  
+    <a href="/2018/07/21/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">create post</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
